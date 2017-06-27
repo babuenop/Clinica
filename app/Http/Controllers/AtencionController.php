@@ -13,7 +13,7 @@ class AtencionController extends Controller
      */
     public function index()
     {
-        return view('atencion');
+        return view('atencionindex');
 
     }
 
@@ -46,7 +46,7 @@ class AtencionController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('atencion');
     }
 
     /**
