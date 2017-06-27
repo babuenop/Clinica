@@ -13,9 +13,7 @@ class AtencionController extends Controller
      */
     public function index()
     {
-        $registroatencion = registroatencion::orderBy('id','ASC')->paginate(5);
-        return view('users.index', compact('users'));
-
+    	return view('atencion');
     }
 
     /**
