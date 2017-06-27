@@ -22,9 +22,21 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 //route::auth();
 
+//Rutas Usuarios 
+Route::resource('/users', 'userController'); 
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/atencion', 'AtencionController');
 Route::resource('/expediente', 'ExpedienteController');
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
