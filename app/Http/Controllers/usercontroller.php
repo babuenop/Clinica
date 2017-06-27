@@ -1,10 +1,8 @@
 <?php
 
-namespace clinica\Http\Controllers;
+namespace App\Http\Controllers;
 
-use clinica\users;
 use Illuminate\Http\Request;
-use clinica\Http\Controllers\usercontroller;
 
 class usercontroller extends Controller
 {
@@ -14,9 +12,8 @@ class usercontroller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        $users = users::orderBy('id','ASC')->paginate(5);
-        return view('users.index', compact('users'));
+    {
+        //
     }
 
     /**
@@ -26,7 +23,7 @@ class usercontroller extends Controller
      */
     public function create()
     {
-        return view('users.create');//
+        //
     }
 
     /**
@@ -37,7 +34,7 @@ class usercontroller extends Controller
      */
     public function store(Request $request)
     {
-         return ('store');//
+        //
     }
 
     /**
@@ -48,8 +45,7 @@ class usercontroller extends Controller
      */
     public function show($id)
     {
-        $user = users::find($id);
-        return view('users.show', compact('user'));    
+        //
     }
 
     /**
@@ -60,7 +56,7 @@ class usercontroller extends Controller
      */
     public function edit($id)
     {
-        return view('users.edit', compact('user'));//
+        //
     }
 
     /**
@@ -72,7 +68,7 @@ class usercontroller extends Controller
      */
     public function update(Request $request, $id)
     {
-       return ('Update');//
+        //
     }
 
     /**
@@ -83,9 +79,6 @@ class usercontroller extends Controller
      */
     public function destroy($id)
     {
-        $Auth = Auth::findOrFail($id);
-        $Auth->delete();
-        
-        return redirect('candidates.index');
+        //
     }
 }
