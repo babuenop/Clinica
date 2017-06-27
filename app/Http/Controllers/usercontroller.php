@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use App\User;
 use Illuminate\Http\Request;
 
 class usercontroller extends Controller
@@ -13,7 +15,7 @@ class usercontroller extends Controller
      */
     public function index()
     {
-        //
+        $users = User::orderBy('id','ASC')->paginate(5);
     }
 
     /**
