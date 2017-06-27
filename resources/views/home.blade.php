@@ -2,16 +2,12 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="nav nav-justified">
+        <a class="btn btn-lg btn-success" href="user" role="button">Usuarios</a>
+        <a class="btn btn-lg btn-success" href="#" role="button">Registro Pacientes</a>
+        <a class="btn btn-lg btn-success" href="#" role="button">Registro Atencion</a>
+        <a class="btn btn-lg btn-success" href="#" role="button">Registro Medico</a>
+        </p>
+    </div>     
 </div>
 @endsection
