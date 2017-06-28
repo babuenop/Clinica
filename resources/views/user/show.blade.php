@@ -29,7 +29,7 @@
                     </tr>
                     
                 </table> 
-                   <br> <a href="{{ route('user.create') }}" class="btn btn-warning sm pull-right">Editar</a>
+                   <br> 
             </div>
         </div>
     </div>
