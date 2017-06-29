@@ -26,7 +26,7 @@
                 <h3></h3>
                 <p></p>
                 <p>
-               <a class="btn btn-success" href="#" role="button">Registro Pacientes</a>
+               <a class="btn btn-success" href="" role="button">Registro Pacientes</a>
                 </p>
               </div>
             </div>
