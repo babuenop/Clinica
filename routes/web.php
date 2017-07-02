@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
+
 //Rutas Usuarios 
 Route::resource('/user', 'usercontroller'); 
 Route::resource('/atencion', 'AtencionController');

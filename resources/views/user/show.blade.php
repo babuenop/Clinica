@@ -4,11 +4,11 @@
     <div class="row">
         <div class="col-4 ">
             <div class="panel panel-default">
-                <div class="panel-heading"> 
-                    <h2>
-                        {{$user->id}} - {{$user->name}}
-                        
-                    </h2> 
+            <div class="panel-heading">Ver Usuarios</div>
+            <div class="panel-body">
+                    <h3>
+                    <b>{{$user->id}} - {{$user->name}}</b>
+                    </h3> 
                 </div>
                 <div class="panel-body">
                 <table style="width:40%">
