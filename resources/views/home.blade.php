@@ -6,7 +6,7 @@
         <div class="col">
           <div class="col-sm-6 col-md-3">
             <div class="thumbnail">
-              <img src="img/repuestos.jpg" alt="...">
+              <img src="img/usuarios.png" alt="...">
               <div class="caption">
                 <h3></h3>
                 <p></p>
@@ -21,7 +21,7 @@
         <div class="col">
           <div class="col-sm-6 col-md-3">
             <div class="thumbnail">
-              <img src="img/salidas.jpg" alt="...">
+              <img src="img/pacientes.png" alt="...">
               <div class="caption">
                 <h3></h3>
                 <p></p>
@@ -36,7 +36,7 @@
         <div class="col">
           <div class="col-sm-6 col-md-3">
             <div class="thumbnail">
-              <img src="usuarios.jpg" alt="...">
+              <img src="img/registros.png" alt="...">
               <div class="caption">
                 <h3></h3>
                 <p></p>
@@ -51,7 +51,7 @@
         <div class="col">
           <div class="col-sm-6 col-md-3">
             <div class="thumbnail">
-              <img src="img/stocks.jpg" alt="...">
+              <img src="img/medico.png" alt="...">
               <div class="caption">
                 <h3></h3>
                 <p></p>
