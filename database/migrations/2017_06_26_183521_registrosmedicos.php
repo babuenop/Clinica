@@ -29,6 +29,11 @@ class registrosmedicos extends Migration
             $table->string('peso');
             $table->string('estatura');
             $table->string('estado');
+            $table->string('sintomas');
+            $table->string('diagnostico');
+            $table->string('receta');
+            $table->string('proximacita');
+            
             $table->timestamps();
         });
     }

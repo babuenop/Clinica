@@ -41,7 +41,7 @@
                 <h3></h3>
                 <p></p>
                 <p>
-                 <a src="usuarios.jpg" class="btn btn-success" href="#" role="button">Registro Atencion</a>
+                 <a src="usuarios.jpg" class="btn btn-success" href="registroatencion" role="button">Registro Atencion</a>
                 </p>
               </div>
             </div>
@@ -56,8 +56,22 @@
                 <h3></h3>
                 <p></p>
                 <p>
-                
-                 <a class="btn btn-success" href="#" role="button">Registro Medico</a>
+                 <a class="btn btn-success" href="registrosmedicos" role="button">Registro Medico</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+              <img src="img/config.png" alt="...">
+              <div class="caption">
+                <h3></h3>
+                <p></p>
+                <p>
+                 <a class="btn btn-success" href="motivos" role="button">Configuracion</a>
                 </p>
               </div>
             </div>
