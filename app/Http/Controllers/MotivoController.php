@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\motivo;
 use Illuminate\Http\Request;
 
 class MotivoController extends Controller
@@ -13,7 +14,8 @@ class MotivoController extends Controller
      */
     public function index()
     {
-        //
+        $motivos = motivo::orderBy('motivo')->paginate(10);
+        return view('motivos.index', compact('motivos'));
     }
 
     /**
@@ -23,7 +25,7 @@ class MotivoController extends Controller
      */
     public function create()
     {
-        //
+        return view ('motivos.create');
     }
 
     /**
@@ -34,7 +36,10 @@ class MotivoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $motivo = new motivo;
+        $motivo ->motivo=$request ->get('motivo');
+        $motivo ->save();
+        return redirect()->route('motivos.index');
     }
 
     /**
