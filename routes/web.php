@@ -31,3 +31,8 @@ Route::post('expedientes/index','expedienteController@index');
 Route::resource('/motivos', 'motivoController');
 Route::post('motivos/motivo','motivoController@store');
 Route::post('motivos/index','motivoController@index');
+
+Route::resource('registrosatencion', 'registroatencionController');
+
+
+Route::resource('registromedico', 'registromedicoController');

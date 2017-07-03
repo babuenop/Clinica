@@ -41,7 +41,7 @@
                 <h3></h3>
                 <p></p>
                 <p>
-                 <a src="usuarios.jpg" class="btn btn-success" href="registroatencion" role="button">Registro Atencion</a>
+                 <a src="usuarios.jpg" class="btn btn-success" href="registrosatencion" role="button">Registro Atencion</a>
                 </p>
               </div>
             </div>

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\registromedico;
 use Illuminate\Http\Request;
 
-class AtencionController extends Controller
+class registroatencionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,9 @@ class AtencionController extends Controller
      */
     public function index()
     {
-    	return view('atencion');
+    	$registros = registromedico::orderBy('nit')->paginate(10);
+        return view('registrosatencion.index', compact('registros'));
+       
     }
 
     /**
@@ -45,7 +48,7 @@ class AtencionController extends Controller
      */
     public function show($id)
     {
-        return view('atencion');
+        //
     }
 
     /**

@@ -13,7 +13,7 @@ class registrosmedicos extends Migration
      */
     public function up()
     {
-        Schema::create('registroAtencion', function (Blueprint $table) {
+        Schema::create('registrosmedicos', function (Blueprint $table) {
             $table->increments('id');
             $table->string ('nit')->unique();
             $table->string('f_atencion');
