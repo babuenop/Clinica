@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\expediente;
 use Illuminate\Http\Request;
 
 class ExpedienteController extends Controller
@@ -13,9 +14,8 @@ class ExpedienteController extends Controller
      */
     public function index()
     {
-        //
-        
-       return view('expedientes.index');
+         $expediente = expediente::orderBy('nit','ASC')->paginate(5);
+        return view('expedientes.index', compact('expediente'));
     }
 
     /**
@@ -25,7 +25,7 @@ class ExpedienteController extends Controller
      */
     public function create()
     {
-        
+        return view('expedientes.create');
         //
     }
 

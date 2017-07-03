@@ -14,18 +14,12 @@ class expedientes extends Migration
     public function up()
     {
         Schema::create('expedientes', function (Blueprint $table) {
-            $table->increments('nit');
+            $table->string('nit')->unique();;
             $table->string('nombre');
-            $table->dateTime('f_nacimiento');
-            $table->string('tel', 8);
+            $table->dateTime('fnacimiento');
+            $table->string('telefono', 8);
             $table->string('email')->unique();
-            $table->mediumText('description');
-
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')
-                  ->references('id')->on('users'); //Llave Foranea
-                  
-            $table->string('presion_arterial');
+            $table->mediumText('direccion');
             $table->timestamps();
         });
     }
