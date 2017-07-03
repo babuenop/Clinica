@@ -16,7 +16,7 @@ class expedientes extends Migration
         Schema::create('expedientes', function (Blueprint $table) {
             $table->string('nit')->unique();;
             $table->string('nombre');
-            $table->dateTime('fnacimiento');
+            $table->date('fnacimiento');
             $table->string('telefono', 8);
             $table->string('email')->unique();
             $table->mediumText('direccion');

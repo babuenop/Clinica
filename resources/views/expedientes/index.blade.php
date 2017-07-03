@@ -9,7 +9,7 @@
                 <div class="panel-heading">Lista de Expedientes</div>
                 <div class="panel-body">
                 
-                <a href="{{ route('expedientes.create') }}" class="btn btn-success xs">Nuevo</a>
+                <a href="{{route('expedientes.create') }}" class="btn btn-success xs">Nuevo</a>
 
                 <table class="table table-hover table-striped">
                     <thead> 
@@ -25,25 +25,24 @@
                     </thead>
                     <tbody> 
                        
-                        @foreach($expediente as $expedientes)
+                        @foreach($expedientes as $expediente)
                         <tr>
                             <td>{{$expediente->nit}}</td>  
-                            <td>{{$expediente->name}}</td> 
+                            <td>{{$expediente->nombre}}</td> 
                             <td>{{$expediente->fnacimiento}}</td>
                             <td>{{$expediente->telefono}}</td>
                             <td>{{$expediente->email}}</td>
-                            <td>{{$expediente->direccion}}</td>
-                            <td>{{$expediente->created_at}}</td>   
+                            <td>{{$expediente->direccion}}</td>   
                             
                             <td> 
-                            <a href="{{ route('expediente.show' , $user->id) }}" class="btn btn-success pull-right">Ver</a> 
+                            <a href="{{ route('expedientes.show' , $expediente->nit) }}" class="btn btn-success pull-right">Ver</a> 
                             
                             </td>  
                         </tr>
                         @endforeach
                     </tbody>
                 </table>
-                {!!$expediente->render() !!}
+                {!!$expedientes->render()!!}
                 </div>
             </div>
         </div>

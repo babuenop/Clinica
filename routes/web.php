@@ -25,6 +25,6 @@ Auth::routes();
 Route::resource('/user', 'usercontroller'); 
 
 Route::resource('/expedientes', 'expedienteController');
-Route::post('store','expedienteController@store');
-
+Route::post('expedientes/registro','expedienteController@store');
+Route::post('expedientes/index','expedienteController@index');
 

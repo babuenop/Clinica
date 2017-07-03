@@ -12,6 +12,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!--DatePicker-->
+    <link rel="stylesheet" href="{{ asset('css/plugins/datepicker/bootstrap-datepicker3.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/plugins/datepicker/bootstrap-iso.css') }}"/>
+    
 </head>
 <body>
     <div id="app">

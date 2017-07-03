@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\expediente;
 use Illuminate\Http\Request;
 
-class ExpedienteController extends Controller
+class expedienteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class ExpedienteController extends Controller
      */
     public function index()
     {
-         $expediente = expediente::orderBy('nit','ASC')->paginate(5);
-        return view('expedientes.index', compact('expediente'));
+        $expedientes = expediente::orderBy('nit')->paginate(5);
+        return view('expedientes.index', compact('expedientes'));
     }
 
     /**
@@ -23,10 +23,9 @@ class ExpedienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('expedientes.create');
-        //
+        return  view('expedientes.create');
     }
 
     /**
@@ -37,7 +36,15 @@ class ExpedienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $expediente = new expediente;
+        $expediente ->nit               =$request ->get('nit');
+        $expediente ->nombre            =$request ->get('nombre');
+        $expediente ->fnacimiento       =$request ->get('fnacimiento');
+        $expediente ->telefono          =$request ->get('telefono');
+        $expediente ->email             =$request ->get('email');
+        $expediente ->direccion         =$request ->get('direccion');
+        $expediente ->save();
+        return redirect()->route('expedientes.index');
     }
 
     /**
