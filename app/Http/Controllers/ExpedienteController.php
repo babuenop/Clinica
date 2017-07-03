@@ -15,7 +15,7 @@ class ExpedienteController extends Controller
     {
         //
         
-       return view('pacientes.index');
+       return view('expedientes.index');
     }
 
     /**
@@ -25,6 +25,7 @@ class ExpedienteController extends Controller
      */
     public function create()
     {
+        
         //
     }
 

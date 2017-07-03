@@ -23,8 +23,8 @@ Auth::routes();
 
 //Rutas Usuarios 
 Route::resource('/user', 'usercontroller'); 
-Route::resource('/atencion', 'AtencionController');
-Route::resource('/expediente', 'ExpedienteController');
 
+Route::resource('/expedientes', 'expedienteController');
+Route::post('store','expedienteController@store');
 
 

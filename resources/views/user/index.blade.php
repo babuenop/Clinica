@@ -6,7 +6,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Lista de Usuarios</div>
                 <div class="panel-body">
-                <a href="{{ route('user.create') }}" class="btn btn-success xs">Nuevo</a>
+                
                 <table class="table table-hover table-striped">
                     <thead> 
                         <tr>  
@@ -25,7 +25,7 @@
                             <td>{{$user->name}}</td> 
                             <td>{{$user->email}}</td>
                             <td>{{$user->created_at}}</td>   
-                            <td>{{$user->update_at}}</td>      
+                            <td>{{$user->updated_at}}</td>      
                             <td> 
                             <a href="{{ route('user.show' , $user->id) }}" class="btn btn-success pull-right">Ver </a> 
                             
