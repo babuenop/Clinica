@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\registromedico;
 use Illuminate\Http\Request;
 
 class registromedicoController extends Controller
@@ -13,7 +14,8 @@ class registromedicoController extends Controller
      */
     public function index()
     {
-    	return view('atencion');
+    	$registros = registromedico::orderBy('nit')->paginate(10);
+        return view('registrosmedicos.index', compact('registros'));
     }
 
     /**

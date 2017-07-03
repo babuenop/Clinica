@@ -34,5 +34,4 @@ Route::post('motivos/index','motivoController@index');
 
 Route::resource('registrosatencion', 'registroatencionController');
 
-
-Route::resource('registromedico', 'registromedicoController');
+Route::resource('registrosmedicos', 'registromedicoController');
