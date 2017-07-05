@@ -15,16 +15,12 @@ class registrosmedicos extends Migration
     {
         Schema::create('registrosmedicos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string ('nit')->unique();
+            $table->string ('nit');
             $table->string('f_atencion');
-            $table->time('hora');
+            $table->string('hora');
             $table->string('motivo');
             $table->string('comentarios');
-
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')
-                  ->references('id')->on('users'); //Llave Foranea
-            
+            $table->string('user_id');
             $table->string('presion_arterial');
             $table->string('peso');
             $table->string('estatura');
@@ -33,7 +29,6 @@ class registrosmedicos extends Migration
             $table->string('diagnostico');
             $table->string('receta');
             $table->string('proximacita');
-            
             $table->timestamps();
         });
     }

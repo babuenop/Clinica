@@ -8,4 +8,6 @@ class expediente extends Model
 {
     //
     protected $table='expedientes';
+
+    protected $fillable=['nit'];
 }

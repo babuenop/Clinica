@@ -35,8 +35,7 @@
                             <td>{{$registro->direccion}}</td>   
                             
                             <td> 
-                            <a href="{{ route('registrosatencion.show' , $expediente->nit) }}" class="btn btn-success pull-right">Ver</a> 
-                            
+
                             </td>  
                         </tr>
                         @endforeach

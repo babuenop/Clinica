@@ -44,7 +44,7 @@ class expedienteController extends Controller
         $expediente ->email             =$request ->get('email');
         $expediente ->direccion         =$request ->get('direccion');
         $expediente ->save();
-        return redirect()->route('expedientes.index');
+        return redirect()->route('home');
     }
 
     /**
