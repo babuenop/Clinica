@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\registromedico;
+
+use App\motivo;
+use App\expediente;
+use App\registroatencion;
 use Illuminate\Http\Request;
 
 class registroatencionController extends Controller
@@ -14,7 +17,7 @@ class registroatencionController extends Controller
      */
     public function index()
     {
-    	$registros = registromedico::orderBy('nit')->paginate(10);
+    	$registros = registroatencion::orderBy('nit')->paginate(10);
         return view('registrosatencion.index', compact('registros'));
        
     }
@@ -26,7 +29,8 @@ class registroatencionController extends Controller
      */
     public function create()
     {
-        //
+        $nit = expediente::pluck('nit');     
+        return view('registrosatencion.create', compact('nit'));
     }
 
     /**
@@ -37,7 +41,20 @@ class registroatencionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         
+        $registro = new registroatencion;
+        $registro -> nit=$request ->get('nit');     
+        $registro -> f_atencion=$request ->get('f_atencion');     
+        $registro -> hora=$request ->get('hora');     
+        $registro -> motivo=$request ->get('motivo');     
+        $registro -> presion_arterial=$request ->get('presion_arterial');     
+        $registro -> peso=$request ->get('peso');     
+        $registro -> estatura=$request ->get('estatura');     
+        $registro -> estado=$request ->get('estado');     
+        $registro -> comentarios=$request ->get('comentarios');         
+        $registro -> user_id=$request ->get('user_id');     
+        $registro ->save();
+        return redirect()->route('registrosatencion.index');
     }
 
     /**
