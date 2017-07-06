@@ -15,11 +15,15 @@
                     <thead> 
                         <tr>  
                             <th with="20px">Nit</th>
-                            <th>Nombre</th>
-                            <th>Fecha Nacimiento</th>
-                            <th>Telefono</th>
-                            <th>Email</th>
-                            <th>Direccion</th>
+                            <th>Fecha Atencion</th>
+                            <th>Hora</th>
+                            <th>Motivo</th>
+                            <th>Comentarios</th>
+                            <th>Registrado por</th>
+                            <th>Presion</th>
+                            <th>Peso</th>
+                            <th>Estatura</th>
+                            <th>Estado</th>
                             <th colspan="2">&nbsp;</th>                        
                         </tr>
                     </thead>
@@ -28,11 +32,15 @@
                         @foreach($registros as $registro)
                         <tr>
                             <td>{{$registro->nit}}</td>  
-                            <td>{{$registro->nombre}}</td> 
-                            <td>{{$registro->fnacimiento}}</td>
-                            <td>{{$registro->telefono}}</td>
-                            <td>{{$registro->email}}</td>
-                            <td>{{$registro->direccion}}</td>   
+                            <td>{{$registro->f_atencion}}</td> 
+                            <td>{{$registro->hora}}</td>
+                            <td>{{$registro->motivo}}</td>
+                            <td>{{$registro->comentarios}}</td>
+                            <td>{{$registro->user_id}}</td>   
+                            <td>{{$registro->presion_arterial}}</td>   
+                            <td>{{$registro->peso}}</td>   
+                            <td>{{$registro->estatura}}</td>   
+                            <td>{{$registro->estado}}</td>   
                             
                             <td> 
 

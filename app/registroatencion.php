@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class registroatencion extends Model
 {
     protected $table = 'registrosmedicos';
-    protected $fillable=['nit'];
+
 }

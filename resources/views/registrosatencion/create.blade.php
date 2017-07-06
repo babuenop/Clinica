@@ -13,6 +13,7 @@
                             <label for="nit" class="col-md-2 control-label">Nit</label>
                              <div class="col-md-9">
                                 {!! Form::select('nit',$nit)!!}
+
                             </div>
                         </div>
 
@@ -99,7 +100,7 @@
                             <label for="user_id" class="col-md-2 control-label">Registrado por</label>
 
                             <div class="col-md-9">
-                                <input id="user_id" type="text" class="form-control" name="user_id" value=" {{ Auth::user()->name }}" disabled>
+                                <input id="user_id" type="text" class="form-control" name="user_id" value=" {{ Auth::user()->name }}">
 
                             </div>
                         </div>
