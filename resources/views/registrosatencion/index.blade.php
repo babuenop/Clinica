@@ -43,6 +43,7 @@
                             <td>{{$registro->estado}}</td>   
                             
                             <td> 
+       
 
                             </td>  
                         </tr>

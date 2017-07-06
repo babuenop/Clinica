@@ -36,4 +36,4 @@ Route::resource('registrosatencion', 'registroatencionController');
 Route::post('registrosatencion/registro','registroatencionController@store');
 
 
-Route::resource('registrosmedicos', 'registromedicoController');
+Route::resource('/registrosmedicos', 'registromedicoController');

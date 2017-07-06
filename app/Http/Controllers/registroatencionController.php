@@ -7,6 +7,7 @@ use App\motivo;
 use App\expediente;
 use App\registroatencion;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class registroatencionController extends Controller
 {
@@ -29,8 +30,9 @@ class registroatencionController extends Controller
      */
     public function create()
     {
-        $nit = expediente::pluck('nit');     
-        return view('registrosatencion.create', compact('nit'));
+        $nit = DB::table('expedientes') -> get();
+        $motivo = DB::table('motivos')->get();    
+        return view('registrosatencion.create', compact('nit','motivo'));
     }
 
     /**

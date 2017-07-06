@@ -47,7 +47,8 @@ class registromedicoController extends Controller
      */
     public function show($id)
     {
-        return view('atencion');
+        $registros = registromedico::find($id);
+        return view('registrosmedicos.show', compact ('registros'));    
     }
 
     /**
